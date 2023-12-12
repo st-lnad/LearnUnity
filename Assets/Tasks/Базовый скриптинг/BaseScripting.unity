@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 823870152}
   - component: {fileID: 823870154}
   m_Layer: 0
-  m_Name: SuoerCube
+  m_Name: SuperCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb9f321ec90170429942c54ce9a2e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxScale: 1.15
+  _xMaxScale: 1.5
   _speed: 0.3
 --- !u!114 &823870153
 MonoBehaviour:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb9f321ec90170429942c54ce9a2e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxScale: 2
+  _xMaxScale: 2
   _speed: 1
 --- !u!136 &1124033946
 CapsuleCollider:
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 1617806905}
   - component: {fileID: 1617806904}
   - component: {fileID: 1617806903}
-  - component: {fileID: 1617806902}
+  - component: {fileID: 1617806907}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -568,20 +568,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1617806902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617806901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3bb324422e6b54cbada32630f8d2b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distance: 5
-  _period: 1
 --- !u!135 &1617806903
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -668,6 +654,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1484285570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1617806907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617806901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd77d7e0c4ce244087a65f56a1a3fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
 --- !u!1 &1665524256
 GameObject:
   m_ObjectHideFlags: 0
