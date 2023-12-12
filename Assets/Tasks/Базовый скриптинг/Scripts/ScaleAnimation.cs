@@ -1,23 +1,23 @@
 using UnityEngine;
 
-public class Anim3 : MonoBehaviour
+public class ScaleAnimation : MonoBehaviour
 {
-    [SerializeField, Min(0.001f)] private float _maxScale;
-    [SerializeField, Min(0.001f), Tooltip("Speed in unit/s")] private float _speed;
+    [SerializeField] private float _xMaxScale;
+    [SerializeField, Tooltip("Speed in unit/s")] private float _speed;
     private int _animationDirection;
-    private Vector3 _startScale;
+    private float _xStartScale;
     private float[] _scaleBorders;
 
     private void Awake()
     {
-        _startScale = transform.localScale;
-        _animationDirection = (_maxScale >= 1f) ? 1 : -1;
-        _scaleBorders = new float[2] { Mathf.Min(_startScale.x, _maxScale), Mathf.Max(_startScale.x, _maxScale), };
+        _xStartScale = transform.localScale.x;
+        _animationDirection = (_xMaxScale >= _xStartScale) ? 1 : -1;
+        _scaleBorders = new float[2] { Mathf.Min(_xStartScale, _xMaxScale), Mathf.Max(_xStartScale, _xMaxScale), };
     }
 
     private void OnValidate()
     {
-        _scaleBorders = new float[2] {Mathf.Min(_startScale.x, _maxScale), Mathf.Max(_startScale.x, _maxScale), };
+        _scaleBorders = new float[2] {Mathf.Min(_xStartScale, _xMaxScale), Mathf.Max(_xStartScale, _xMaxScale), };
     }
 
     private void Update()

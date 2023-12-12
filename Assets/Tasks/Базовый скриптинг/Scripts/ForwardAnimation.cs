@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Anim4 : MonoBehaviour
+public class ForwardAnimation : MonoBehaviour
 {
     [SerializeField] private float _speed;
     private void Update()
