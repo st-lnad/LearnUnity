@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+    private Spawner _spawner;
     private void Start()
     {
-        if (Spawner.Instance == null)
-        {
-            Debug.Log("Fuck");
-        }
-        Spawner.Instance.AddSpawnPoint(GetComponent<SpawnPoint>());
+        _spawner = FindFirstObjectByType<Spawner>(); 
+        if (_spawner != null)
+            _spawner.AddSpawnPoint(GetComponent<SpawnPoint>());
     }
     private void OnDisable()
     {
-        Spawner.Instance.DeleteSpawnPoint(GetComponent<SpawnPoint>());
+        if (_spawner != null)
+            _spawner.DeleteSpawnPoint(GetComponent<SpawnPoint>());
     }
 }

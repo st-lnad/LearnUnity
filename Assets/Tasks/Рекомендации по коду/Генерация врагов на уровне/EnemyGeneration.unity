@@ -307,7 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnDelay: 2
-  _enemyPrefab: {fileID: 7433750344090952799, guid: 397b93aeb8f668448980acdf321d485d, type: 3}
+  _enemyPrefab: {fileID: 8615951925826578966, guid: 397b93aeb8f668448980acdf321d485d, type: 3}
+  _spawnPoints: []
 --- !u!4 &260234078
 Transform:
   m_ObjectHideFlags: 0
