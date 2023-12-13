@@ -4,6 +4,8 @@ public class WaypointMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Transform _waypointRoot;
+    [SerializeField] private GameObject _waypoint;
+
     private Transform[] _waypoints;
     private int _currentWaypointIndex;
     private Vector3 _currentWaypointPosition;
