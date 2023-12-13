@@ -4,6 +4,7 @@ using UnityEngine;
 public class AlarmSystem : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _maxVolume = 1f;
     private AudioSource _audioSource;
     private float _volume = 0f;
     private float _targetVolume = 0f;
@@ -13,7 +14,7 @@ public class AlarmSystem : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _targetVolume = 1f;
+        _targetVolume = _maxVolume;
         if (_volume == 0f)
             _audioSource.Play();
     }
