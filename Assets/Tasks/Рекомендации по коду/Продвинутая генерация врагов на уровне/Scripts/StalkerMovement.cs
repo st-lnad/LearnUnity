@@ -11,6 +11,7 @@ public class StalkerMovement : MonoBehaviour
     {
         transform.Translate(_direction * _speed * Time.deltaTime);
     }
+
     public void SetTarget(Transform target)
     {
         _target = target;

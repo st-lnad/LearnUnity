@@ -7,7 +7,6 @@ public class WaypointMovement : MonoBehaviour
     [SerializeField] private float _speed;
 
     private int _currentWaypointIndex = 0;
-    
     private Vector3 _previousPosition;
     private Vector3 _currentPosition;
     private float _elapsedTime;
@@ -20,10 +19,12 @@ public class WaypointMovement : MonoBehaviour
         if (_elapsedTime >= _expectedTime)
             ComputeWayToNextPoint();
     }
+
     private void Awake()
     {
         ComputeWayToNextPoint();
     }
+
     private void ComputeWayToNextPoint()
     {
         _currentWaypointIndex = ++_currentWaypointIndex % _waypoints.Count;

@@ -15,6 +15,7 @@ public class AdvancedSpawnPoint : MonoBehaviour
         if (_spawner != null)
             _spawner.AddSpawnPoint(GetComponent<AdvancedSpawnPoint>());
     }
+
     private void OnDisable()
     {
         if (_spawner != null)
